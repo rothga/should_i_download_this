@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Download this?</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </head>
+  <body>
+
+  <script>
+    $(document).ready(function () {
+
+      var threat_count = 87341;
+      var progress_percent = 0;
+
+      window.setInterval(function(){
+        threat_count = threat_count + (Math.floor(Math.random() * 250) + 100);
+        $('#threat-count').text(threat_count);
+      }, 1000);
+
+      $('#upload-button').change(function() {
+        $('#upload-button').fadeOut();
+        $('#upload-area').delay(2500).fadeIn();
+
+        $('#file-name').text('Inspecting ' + $('#upload-file').prop("files")[0]['name'] + '...');
+
+        window.setTimeout(function () {
+          $('#upload-status').text('Generating MD5 hash of uploaded file');
+          progress_percent = progress_percent + (Math.floor(Math.random() * 25) + 1)
+          $('#threat-progress').width(progress_percent + '%').attr('aria-valuenow', progress_percent);
+
+          window.setTimeout(function () {
+            $('#upload-status').text('Synchronizing global threat feeds');
+            progress_percent = progress_percent + (Math.floor(Math.random() * 25) + 1)
+            $('#threat-progress').width(progress_percent + '%').attr('aria-valuenow', progress_percent);
+
+            window.setTimeout(function () {
+              $('#upload-status').text('Orchestrating machine learning algorithms');
+              progress_percent = progress_percent + (Math.floor(Math.random() * 25) + 1)
+              $('#threat-progress').width(progress_percent + '%').attr('aria-valuenow', progress_percent);
+
+              window.setTimeout(function () {
+                $('#upload-status').text('Cross-checking nation state databases');
+                progress_percent = progress_percent + (Math.floor(Math.random() * 25) + 1)
+                $('#threat-progress').width(progress_percent + '%').attr('aria-valuenow', progress_percent);
+
+                window.setTimeout(function () {
+                  $('#upload-status').text('Generating results, please stand by');
+                  $('#threat-progress').width('100%').attr('aria-valuenow', 100);
+
+                  window.setTimeout(function () {
+                    window.location.href = 'results.html';
+                  }, 5000);
+                }, 3000);
+              }, 3000);
+            }, 3000);
+          }, 3000);
+        }, 3000);
+      });
+    });
+  </script>
+
+  <div class="container-fluid">
+  	<div class="row">
+  		<div class="col-md-2">
+  		</div>
+  		<div class="col-md-8">
+        <img class="img-responsive center-block rounded" src=http://i.imgur.com/dCMYfjw.png/>
+  			<div class="page-header text-center">
+  				<h1>
+  					Should I download this? </br><small>Protecting you from <span id="threat-count">87341</span> threats.<small>
+  				</h1>
+  			</div>
+
+        <div class="text-center">
+          <label class="btn btn-primary btn-file btn-lg" id="upload-button">
+            Upload <input type="file" style="display: none;" id="upload-file">
+          </label>
+        </div>
+
+        <div id="upload-area" style="display:none">
+          </br>
+          <p class="h4 text-left" id="file-name">
+          </p>
+          </br>
+          </br>
+    			<div class="progress active progress-striped">
+    				<div class="progress-bar progress-success" id="threat-progress" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+    				</div>
+    			</div>
+    			<p class="text-center lead text-muted medium" id="upload-status">
+    			</p>
+          <p class="text-right text-muted">
+            Built with <3 in Austin, Texas.
+          </p>
+        </div>
+  		</div>
+  		<div class="col-md-2">
+  		</div>
+  	</div>
+  </div>
+  </body>
+</html>

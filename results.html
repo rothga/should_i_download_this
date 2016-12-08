@@ -1,0 +1,95 @@
+<html>
+<style type="text/css">
+            #posts {
+                width: 90%;
+                height: 200px;
+                margin: auto
+            }
+        </style>
+ <body onload="return ran_col()">
+        <div id="posts">
+        </div>
+        <script type="text/javascript">
+            function ran_col() { //function name
+                var color = '#'; // hexadecimal starting symbol
+                var letters = ['FF0000','00FF00','0000FF','FFFF00','00FFFF','FF00FF']; //Set your colors here
+                color += letters[Math.floor(Math.random() * letters.length)];
+                document.getElementById('posts').style.background = color; // Setting the random color on your div element.
+            }
+        </script>
+        <h3> Reference the wheel of results below to match your results to a color. </h3>    </body>
+ 
+  <head>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="main.css">
+    
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <li><a href="#">Results</a></li>
+          <li><a href="#">Results</a></li>
+        </ul>
+        <ul class="pull-right">
+          <li><a href="#">Results</a></li>
+          <li><a href="#">Results</a></li>
+          <li><a href="#">Results</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Find results.</h1>
+        <p>Get results from a large database.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    
+    <div class="neighborhood-guides">
+         <div class="container">
+            <h2>Result Guides</h2>
+            <p>Not sure where to results? We have results.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                      <img src="http://i.imgur.com/872FDBm.gif" >
+                    </div>
+                    
+            </div>
+            <img width="400" src="https://i.imgsafe.org/9bb3565060.png">
+            <div class="row">
+                <div class="col-md-4">
+                <img src="https://media.giphy.com/media/3o7TKUzPL7rNsMLata/source.gif">
+                </div>
+                </div>
+         </div>
+    </div>
+
+    <div class="learn-more">
+	  <div class="container">
+		<div class="row">
+	      <div class="col-md-4">
+			<h3>Results</h3>
+			<p>From results and results to results and results: stay in unique results in 192 results.</p>
+			<p><a href="#">See how to travel on Airbnb</a></p>
+	      </div>
+		  <div class="col-md-4">
+			<h3>Results</h3>
+			<p>Results out your unused results could pay your bills or fund your next result.</p>
+			<p><a href="#">Learn more about results</a></p>
+		  </div>
+		  <div class="col-md-4">
+			<h3>Results</h3>
+			<p>From Verified ID to our worldwide results team, we've got your results.</p>
+			<p><a href="#">Learn about trust at results</a></p>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+  </body>
+</html>
